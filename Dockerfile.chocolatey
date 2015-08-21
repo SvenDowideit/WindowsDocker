@@ -1,0 +1,7 @@
+FROM windowsservercore
+
+RUN @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"
+
+# ENV PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+
+CMD powershell
